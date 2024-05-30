@@ -39,6 +39,8 @@ dependencies:
   google_nav_bar: ^5.0.6
   get: ^4.6.6
   form_validator: ^2.1.1
+  scroll_to_index: ^3.0.1
+  material_design_icons_flutter: ^7.0.7296
 
 dev_dependencies:
   flutter_test:
@@ -79,11 +81,11 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
+  fonts:
+     - family: gpkn
+       fonts:
+        - asset: assets/fonts/gpkn.ttf
+  #       - asset: fonts/gpkn.ttf
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

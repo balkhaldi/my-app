@@ -1,3 +1,4 @@
+import 'package:doctorapp/color.dart';
 import 'package:doctorapp/constants.dart';
 import 'package:doctorapp/model/sign_up_form.dart';
 import 'package:flutter/material.dart';
@@ -37,7 +38,7 @@ class SignUpScreen extends StatelessWidget {
                     ),
                     Row(
                       children: [
-                        Text("Already have an account?"),
+                        const Text("Already have an account?"),
                         TextButton(
                           onPressed: () {},
 
@@ -61,7 +62,9 @@ class SignUpScreen extends StatelessWidget {
                             _formKey.currentState!.save();
                           }
                         },
-                        child: Text("Sign Up" , style: TextStyle(color: Colors.white),),
+                        style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all<Color>(blue3)),
+                        child: Text("Sign Up" , style: TextStyle(color: Colors.white , fontWeight: FontWeight.bold),),
                       ),
                     ),
                   ],

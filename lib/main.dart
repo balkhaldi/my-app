@@ -1,3 +1,4 @@
+import 'package:doctorapp/color.dart';
 import 'package:doctorapp/constants.dart';
 import 'package:doctorapp/views/welcome_screen.dart';
 import 'package:flutter/material.dart';
@@ -15,19 +16,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     OutlineInputBorder textFieldBorder = OutlineInputBorder(
       borderSide: BorderSide(
-        color: primaryColor.withOpacity(0.1),
+        color: blue5,
       ),
     );
     return GetMaterialApp(
+
       debugShowCheckedModeBanner: false,
       title: 'Healthcare _ Doctor Consultation App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
-        primaryColor: primaryColor,
+        primaryColor: blue6,
         textTheme: Theme.of(context).textTheme.apply(displayColor: textColor),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: TextButton.styleFrom(
-            backgroundColor: primaryColor,
             padding: EdgeInsets.all(defaultPadding),
 
           ),

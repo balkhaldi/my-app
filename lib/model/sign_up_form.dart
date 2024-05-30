@@ -1,12 +1,12 @@
 import 'package:doctorapp/constants.dart';
 import 'package:flutter/material.dart';
-import 'package:form_validator/form_validator.dart';
+import 'package:get/get.dart';
 
 class SignUpForm extends StatelessWidget {
   SignUpForm({
-    Key? key,
+    super.key,
     required this.formKey,
-  }) : super(key: key);
+  });
 
   final GlobalKey formKey;
   late String _userName, _email, _password, _phoneNumber;
@@ -21,13 +21,15 @@ class SignUpForm extends StatelessWidget {
           const TextFieldName(text: "UserName"),
           TextFormField(
             decoration: const InputDecoration(hintText: "BashayerAlk28"),
+            validator: (value){if(value!.isEmail)return '';},
+
             onSaved: (username) => _userName = username!,
           ),
           const SizedBox(height: defaultPadding),
           const TextFieldName(text: "Email"),
           TextFormField(
             keyboardType: TextInputType.emailAddress,
-            decoration: InputDecoration(hintText: "test@gmail.com"),
+            decoration: const InputDecoration(hintText: "test@gmail.com"),
             onSaved: (email) => _email = email!,
           ),
           const SizedBox(height: defaultPadding),
